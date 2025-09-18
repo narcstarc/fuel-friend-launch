@@ -55,11 +55,24 @@ const Hero = () => {
           {/* Hero Image */}
           <div className="relative">
             <div className="relative z-10">
-              <img 
-                src={heroMockup} 
-                alt="CalorieTracker app in action showing food scanning feature" 
-                className="w-full max-w-md mx-auto drop-shadow-hero"
-              />
+              {/* iPhone Frame */}
+              <div className="relative max-w-md mx-auto">
+                <div className="relative bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                  <div className="bg-black rounded-[2.5rem] overflow-hidden">
+                    {/* iPhone notch */}
+                    <div className="relative">
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-10"></div>
+                      <img 
+                        src={heroMockup} 
+                        alt="CalorieTracker app in action showing food scanning feature" 
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </div>
+                  {/* iPhone button */}
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-700 rounded-full"></div>
+                </div>
+              </div>
             </div>
             {/* Floating elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-primary rounded-2xl blur-sm opacity-20 animate-pulse"></div>

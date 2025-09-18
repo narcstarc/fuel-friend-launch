@@ -88,11 +88,24 @@ const Features = () => {
               
               <div className={`${index % 2 === 1 ? 'lg:order-1' : ''} relative`}>
                 <div className="relative z-10">
-                  <img
-                    src={feature.image}
-                    alt={`${feature.title} screenshot`}
-                    className="w-full max-w-sm mx-auto drop-shadow-card rounded-3xl"
-                  />
+                  {/* iPhone Frame */}
+                  <div className="relative max-w-sm mx-auto">
+                    <div className="relative bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                      <div className="bg-black rounded-[2.5rem] overflow-hidden">
+                        {/* iPhone notch */}
+                        <div className="relative">
+                          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-4 bg-black rounded-b-xl z-10"></div>
+                          <img
+                            src={feature.image}
+                            alt={`${feature.title} screenshot`}
+                            className="w-full h-auto"
+                          />
+                        </div>
+                      </div>
+                      {/* iPhone button */}
+                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-gray-700 rounded-full"></div>
+                    </div>
+                  </div>
                 </div>
                 {/* Decorative elements */}
                 <div className={`absolute inset-0 bg-gradient-${feature.color === 'health-primary' ? 'primary' : 'secondary'} rounded-3xl blur-3xl opacity-10 scale-110`}></div>
